@@ -23,7 +23,9 @@ trigger.addEventListener('click', () => {
     const options = {
         method: 'GET',
     }
-    fetch('https://picsum.photos/', options)
-        .then(response => response.blob())
-        .then()
+    fetch('https://picsum.photos/'+ x + '/' + y, options)
+        .then(response => {
+            console.log(response);
+            imageContainer.innerHTML = '<img src="' + response.url + '">'
+        })
 })
