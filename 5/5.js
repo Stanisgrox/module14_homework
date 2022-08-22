@@ -24,6 +24,6 @@ trigger.addEventListener('click', () => {
         method: 'GET',
     }
     fetch('https://picsum.photos/', options)
-        .then(response => response.json())
-        .then(json => console.log(json))
+        .then(response => response.blob())
+        .then()
 })
